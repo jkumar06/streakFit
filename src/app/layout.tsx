@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} font-sans antialiased bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen`}
+        suppressHydrationWarning={true}
       >
         <Header />
         <main>
