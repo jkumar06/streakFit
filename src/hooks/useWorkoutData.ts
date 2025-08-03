@@ -16,9 +16,11 @@ const defaultWorkoutData: WorkoutData = {
 export function useWorkoutData() {
   const [workoutData, setWorkoutData] = useState<WorkoutData>(defaultWorkoutData);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Load data from localStorage on mount
   useEffect(() => {
+    setIsMounted(true);
     const loadData = () => {
       try {
         const stored = localStorage.getItem(STORAGE_KEY);
@@ -195,6 +197,7 @@ export function useWorkoutData() {
     currentStreak: workoutData.currentStreak,
     longestStreak: workoutData.longestStreak,
     isLoading,
+    isMounted,
     
     // Actions
     addWorkout,

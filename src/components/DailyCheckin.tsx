@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { DailyCheckinProps, WorkoutType } from '@/types/workout';
-import { getWorkoutTypeDisplayName, getWorkoutTypeColor } from '@/lib/workout-utils';
+import { getWorkoutTypeDisplayName } from '@/lib/workout-utils';
 
 export default function DailyCheckin({ onWorkoutComplete, isTodayCompleted, isLoading = false }: DailyCheckinProps) {
   const [showForm, setShowForm] = useState(false);
@@ -19,7 +19,10 @@ export default function DailyCheckin({ onWorkoutComplete, isTodayCompleted, isLo
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onWorkoutComplete(formData);
+    onWorkoutComplete({
+      ...formData,
+      date: new Date().toISOString().split('T')[0]
+    });
     setShowForm(false);
     setFormData({
       type: 'cardio',
@@ -34,7 +37,8 @@ export default function DailyCheckin({ onWorkoutComplete, isTodayCompleted, isLo
       type: 'cardio',
       duration: 30,
       calories: undefined,
-      notes: ''
+      notes: '',
+      date: new Date().toISOString().split('T')[0]
     });
   };
 
@@ -48,7 +52,7 @@ export default function DailyCheckin({ onWorkoutComplete, isTodayCompleted, isLo
             </svg>
           </div>
           <h3 className="text-xl font-semibold text-slate-900 mb-2">Workout Complete!</h3>
-          <p className="text-slate-600 mb-6">Great job! You've completed your workout for today.</p>
+          <p className="text-slate-600 mb-6">Great job! You&apos;ve completed your workout for today.</p>
           <button
             onClick={() => setShowForm(true)}
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"

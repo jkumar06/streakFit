@@ -28,7 +28,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            StreakFit helps you maintain workout consistency, track your progress, and build the fitness routine you've always wanted. 
+            StreakFit helps you maintain workout consistency, track your progress, and build the fitness routine you&apos;ve always wanted. 
             <span className="font-semibold text-slate-900"> Every streak counts.</span>
           </p>
 
