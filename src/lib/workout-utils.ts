@@ -1,4 +1,4 @@
-import { Workout, WorkoutData, StreakInfo, ConsistencyDay, ProgressStats } from '@/types/workout';
+import { Workout, StreakInfo, ConsistencyDay, ProgressStats } from '@/types/workout';
 
 // Generate unique ID for workouts
 export function generateWorkoutId(): string {
