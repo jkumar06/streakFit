@@ -179,7 +179,7 @@ export default function ProgressStatus({ stats, className = '' }: ProgressStatus
               <div>
                 <div className="text-sm font-medium text-emerald-800">{weeklyLevel.message}</div>
                 <div className="text-xs text-emerald-600 mt-1">
-                  {weeklyConsistency >= 80 ? 'You\'re crushing your fitness goals!' : 
+                  {weeklyConsistency >= 80 ? 'You&apos;re crushing your fitness goals!' : 
                    weeklyConsistency >= 60 ? 'Try to add 1-2 more workouts this week.' : 
                    'Aim for at least 4 workouts this week to see better results.'}
                 </div>
@@ -195,7 +195,7 @@ export default function ProgressStatus({ stats, className = '' }: ProgressStatus
               <div>
                 <div className="text-sm font-medium text-blue-800">{monthlyLevel.message}</div>
                 <div className="text-xs text-blue-600 mt-1">
-                  {monthlyConsistency >= 70 ? 'You\'re building excellent long-term habits!' : 
+                  {monthlyConsistency >= 70 ? 'You&apos;re building excellent long-term habits!' : 
                    'Consistency is key to long-term fitness success.'}
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function ProgressStatus({ stats, className = '' }: ProgressStatus
         <div className="pt-4 border-t border-slate-100">
           <div className="text-center p-4 bg-gradient-to-r from-slate-50 to-slate-100 rounded-lg border border-slate-200">
             <div className="text-lg text-slate-600 italic mb-1">
-              "The only bad workout is the one that didn't happen."
+              &quot;The only bad workout is the one that didn&apos;t happen.&quot;
             </div>
             <div className="text-xs text-slate-500">Keep pushing forward! 💪</div>
           </div>
